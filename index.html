@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .main {
+            width: 50%;
+            color: #fff;
+        }
+        
+        .main__title {
+            font-weight:1000;
+            font-size: 120px;
+            margin-bottom: 15px;
+        }
+        
+        .main__body {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .review-image{
+            max-height: 350px;
+            min-width: 330px;
+            width: 30%;
+        }
+        
+        .link {
+            text-decoration: none;
+            font-size: medium;
+            font-weight: 500;
+        }
+        
+        .link--black {
+            color: #000;
+        }
+        
+        .link--white {
+            color: #fff;
+        }
+        
+        .navbar {
+            height: 100px;
+            position: relative;
+        }
+        
+        .margin-right {
+            margin-right: 5%;
+        }
+        
+        .product-image {
+            height: 150px;
+        }
+        
+        .button {
+            border: none;
+            font-weight: 500;
+        }
+        
+        .button--small {
+            font-size: 16px;
+            padding: 10px 40px;
+            background-color: #ffbf69;
+        }
+        
+        .button--big {
+            font-size: 21px;
+            padding: 15px 50px;
+            background-color: #cbf3f0;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .flex--column {
+            flex-direction: column;
+        }
+        
+        .flex--row {
+            flex-direction: row;
+        }
+        
+        .flex--center {
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .flex--space-between {
+            justify-content: space-between;
+        }
+        
+        .flex--space-around {
+            justify-content: space-around;
+        }
+        
+        .push {
+            margin-left: auto;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 1080px;
+        }
+
+        .item {
+            margin: 10px;
+        }
+        
+        
+        #header {
+            /* flex-grow: 10; */
+            background-image: url(images/background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+            background-color: #ffbf69;
+            min-height: 660px;
+        }
+
+        #burger {
+            display: none;
+        }
+        
+        #about {
+            /* flex-grow: 5; */
+            background-color: #fff;
+            text-align: center;
+            min-height: 320px;
+        }
+        
+        #product {
+            /* flex-grow: 7; */
+            text-align: center;
+            background-color: #cbf3f0;
+            min-height: 507px;
+        }
+        
+        #review {
+            /* flex-grow: 9; */
+            background-image: url(images/bg-grid.png);
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: center;
+            background-color: #fff;
+            min-height: 547px;
+        }
+        
+        #footer {
+            /* flex-grow: 1; */
+            background-color: #333;
+            min-height: 100px;
+        }
+
+        @media only screen and (max-width: 600px){
+            .flex:not(#header) {
+                flex-wrap: wrap;
+            }
+
+            .review-image {
+                width: 100%;
+            }
+
+            .main {
+                width: 100%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP.IT</title>
+</head>
+<body class="flex flex--column">
+    <div id="header">
+        <div class="flex flex--column flex--center">
+            <div class="container navbar flex flex--center">
+                    <a class="link link--black margin-right" href="#about">POP.IT</a>
+
+                    <button href="javascript:void(0);" class="button button--small push" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div id="burger">
+                        <a class="link link--black margin-right" href="#about">ABOUT</a>
+                        <a class="link link--black margin-right" href="#product">PRODUCT</a>
+                        <a class="link link--black" href="#review">REVIEW</a>
+                    </div>
+                    
+                    
+            </div>
+            <div class="container flex">
+                <div class="main">
+                    <p class="main__title">POP IT!</p>
+                    <p class="main__body">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button button--big">BUY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="flex flex--center">
+        <div class="container">
+            <h2>POP IT</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis tempore accusantium alias voluptate, iste ad temporibus dolore molestiae fuga ipsum officia reprehenderit veniam cumque consectetur facilis aperiam vel esse quam!</p>
+        </div>
+    </div>
+    <div id="product" class="flex flex--column flex--center">
+        <h2>POP IT Product</h2>
+        <div class="container flex flex--space-around">
+            <div class="item">
+                <img class="product-image" src="images/square.png">
+                <p><b>Square PopIt</b></p>
+                <button class="button button--small">BUY</button>
+            </div>
+            <div class="item">
+                <img class="product-image" src="images/amongus.png">
+                <p><b>Among Us PopIt</b></p>
+                <button class="button button--small">BUY</button>
+            </div>
+            <div class="item">
+                <img class="product-image" src="images/round.png">
+                <p><b>Round PopIt</b></p>
+                <button class="button button--small">BUY</button>
+            </div>
+        </div>
+    </div>
+    <div id="review" class="flex flex--center">
+        <div class="container flex flex--space-between">
+            <div class="item">
+                <p><b>Review</b></p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa suscipit quisquam ab, deleniti, alias odio ipsum iure accusamus reprehenderit dicta provident excepturi explicabo repellendus assumenda impedit reiciendis ut! Numquam, magnam.
+            </div>
+            <img class="review-image" src="images/photo.jpg">
+        </div>
+    </div>
+    <div id="footer" class="flex flex--center">
+        <div class="container flex flex--space-between">
+            <a class="link link--white" href="#about"><b>POP.IT</b></a>
+            <a class="link link--white" href="#about">About</a>
+            <a class="link link--white" href="#product">Product</a>
+            <a class="link link--white" href="#review">Review</a>
+            <a class="link link--white" href="#">Contact</a>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("burger");
+            
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+    </script>
+</body>
+</html>
